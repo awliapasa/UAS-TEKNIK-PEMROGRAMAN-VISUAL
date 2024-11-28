@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -13,16 +12,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller=".MainController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <ImageView fitHeight="430.0" fitWidth="600.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/background.png" />
+            <Image url="@IMAGE/background.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="63.0" fitWidth="189.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/logo%20clearBg.png" />
+            <Image url="@IMAGE/logo%20clearBg.png" />
          </image>
       </ImageView>
       <SplitPane dividerPositions="0.4174757281553398" layoutX="376.0" layoutY="14.0" prefHeight="57.0" prefWidth="208.0">
@@ -31,15 +30,17 @@
                <children>
                   <VBox alignment="CENTER" layoutX="10.0" layoutY="-14.0" prefHeight="76.0" prefWidth="57.0" spacing="5.0">
                      <children>
-                        <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../IMAGE/IMAGE/beranda.png" />
-                           </image>
-                        </ImageView>
-                        <Button mnemonicParsing="false" text="Beranda">
+                        <Button fx:id="btnBeranda" mnemonicParsing="false" onAction="#beranda" prefHeight="36.0" prefWidth="42.0" text="Beranda">
                            <font>
                               <Font name="System Bold" size="8.0" />
                            </font>
+                           <effect>
+                              <ImageInput>
+                                 <source>
+                                    <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/beranda.png" />
+                                 </source>
+                              </ImageInput>
+                           </effect>
                         </Button>
                      </children>
                   </VBox>
@@ -49,13 +50,13 @@
                <children>
                   <MenuButton layoutX="23.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="74.0" text="MenuButton">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Profile" />
-                      <MenuItem mnemonicParsing="false" text="Settings" />
+                      <MenuItem fx:id="btnProfile" mnemonicParsing="false" onAction="#profile" text="Profile" />
+                      <MenuItem fx:id="btnLogOut" mnemonicParsing="false" onAction="#logout" text="Log Out" />
                     </items>
                      <effect>
                         <ImageInput x="0.5" y="0.5">
                            <source>
-                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/IMAGE/IMAGE/setting.png" />
+                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/setting.png" />
                            </source>
                         </ImageInput>
                      </effect>
@@ -134,12 +135,9 @@
       </VBox>
       <ImageView fitHeight="171.0" fitWidth="148.0" layoutX="33.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/menu%20-%20pengaturan%203.png" />
+            <Image url="@IMAGE/menu%20-%20pengaturan%203.png" />
          </image>
       </ImageView>
-      <ComboBox layoutX="466.0" layoutY="77.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="117.0" promptText="Select Menu" />
-      <ComboBox layoutX="466.0" layoutY="115.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="117.0" promptText="Settings" />
-      <ComboBox layoutX="466.0" layoutY="151.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="117.0" promptText="Profile" />
       <Label layoutX="169.0" layoutY="90.0" prefHeight="69.0" prefWidth="216.0" text="Data Diri Pasien">
          <font>
             <Font name="System Bold" size="28.0" />

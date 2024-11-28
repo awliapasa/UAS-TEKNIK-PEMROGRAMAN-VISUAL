@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,31 +10,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller=".MainController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/background.png" />
+            <Image url="@IMAGE/background.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="63.0" fitWidth="189.0" layoutX="220.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/logo%20clearBg.png" />
+            <Image url="@IMAGE/logo%20clearBg.png" />
          </image>
       </ImageView>
       <VBox layoutX="189.0" layoutY="124.0" prefHeight="63.0" prefWidth="222.0" spacing="10.0">
          <children>
             <TextField promptText="Masukkan username (id) atau email" />
-            <TextField promptText="Kata Sandi" />
+            <PasswordField />
          </children>
       </VBox>
-      <Button layoutX="272.0" layoutY="222.0" mnemonicParsing="false" text="Log In" textAlignment="CENTER">
+      <Button fx:id="btnLogin" layoutX="272.0" layoutY="222.0" mnemonicParsing="false" onAction="#login" text="Log In" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
       <Label layoutX="197.0" layoutY="329.0" text="Belum punya akun?" />
-      <Button layoutX="313.0" layoutY="324.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="68.0" text="Sign Up" textAlignment="CENTER">
+      <Button fx:id="btnSignup" layoutX="313.0" layoutY="324.0" mnemonicParsing="false" onAction="#signup" prefHeight="17.0" prefWidth="68.0" text="Sign Up" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

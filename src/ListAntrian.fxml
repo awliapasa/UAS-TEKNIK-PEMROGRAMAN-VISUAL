@@ -14,33 +14,35 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller=".MainController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <ImageView fitHeight="474.0" fitWidth="600.0" layoutX="1.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/background.png" />
+            <Image url="@IMAGE/background.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="63.0" fitWidth="189.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/logo%20clearBg.png" />
+            <Image url="@IMAGE/logo%20clearBg.png" />
          </image>
       </ImageView>
       <SplitPane dividerPositions="0.4174757281553398" layoutX="376.0" layoutY="14.0" prefHeight="57.0" prefWidth="208.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <VBox alignment="CENTER" layoutX="10.0" layoutY="-14.0" prefHeight="76.0" prefWidth="57.0" spacing="5.0">
+                  <VBox alignment="CENTER" layoutX="12.0" layoutY="-24.0" prefHeight="76.0" prefWidth="57.0" spacing="5.0">
                      <children>
-                        <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../IMAGE/IMAGE/beranda.png" />
-                           </image>
-                        </ImageView>
-                        <Button mnemonicParsing="false" text="Beranda">
+                        <Button fx:id="btnBeranda" mnemonicParsing="false" onAction="#beranda" text="Beranda">
                            <font>
                               <Font name="System Bold" size="8.0" />
                            </font>
+                           <effect>
+                              <ImageInput>
+                                 <source>
+                                    <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/beranda.png" />
+                                 </source>
+                              </ImageInput>
+                           </effect>
                         </Button>
                      </children>
                   </VBox>
@@ -50,13 +52,13 @@
                <children>
                   <MenuButton layoutX="23.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="74.0" text="MenuButton">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                      <MenuItem fx:id="btnProfile" mnemonicParsing="false" onAction="#profile" text="Profile" />
+                      <MenuItem fx:id="btnLogOut" mnemonicParsing="false" onAction="#logout" text="Log Out" />
                     </items>
                      <effect>
                         <ImageInput x="0.5" y="0.5">
                            <source>
-                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/IMAGE/IMAGE/setting.png" />
+                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/setting.png" />
                            </source>
                         </ImageInput>
                      </effect>
@@ -67,7 +69,7 @@
       </SplitPane>
       <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="222.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMAGE/IMAGE/listantrean2.png" />
+            <Image url="@IMAGE/listantrean2.png" />
          </image>
       </ImageView>
       <Label layoutX="282.0" layoutY="110.0" text="List Antrean">
