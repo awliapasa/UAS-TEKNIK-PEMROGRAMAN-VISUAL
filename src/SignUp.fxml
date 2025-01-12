@@ -9,35 +9,37 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@IMAGE/background.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="63.0" fitWidth="189.0" layoutX="220.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="63.0" fitWidth="189.0" layoutX="220.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@IMAGE/logo.png" />
          </image>
       </ImageView>
-      <VBox layoutX="194.0" layoutY="86.0" prefHeight="163.0" prefWidth="222.0" spacing="10.0">
+      <VBox layoutX="192.0" layoutY="64.0" prefHeight="163.0" prefWidth="222.0" spacing="10.0">
          <children>
-            <TextField promptText=" Nama Anda" />
-            <TextField promptText="Jenis Kelamin" />
-            <TextField promptText="Tanggal Lahir" />
-            <TextField promptText="Riwayat Alergi" />
-            <TextField promptText="Email Anda" />
-            <TextField promptText="Kata Sandi" />
+            <TextField fx:id="tfNama" promptText=" Nama Anda" />
+            <TextField fx:id="tfKelamin" promptText="Jenis Kelamin" />
+            <TextField fx:id="tfLahir" promptText="Tanggal Lahir (YY-MM-DD)" />
+            <TextField fx:id="tfAlamat" promptText="Alamat" />
+            <TextField fx:id="tfTelp" promptText="No.Telp" />
+            <TextField fx:id="tfAlergi" promptText="Riwayat Alergi" />
+            <TextField fx:id="tfEmail" promptText="Email Anda" />
+            <TextField fx:id="tfSandi" promptText="Kata Sandi" />
          </children>
       </VBox>
-      <Button fx:id="btnSignup2" layoutX="272.0" layoutY="299.0" mnemonicParsing="false" onAction="#signup2" text="Sign Up" textAlignment="CENTER">
+      <Button fx:id="btnSignup2" layoutX="267.0" layoutY="350.0" mnemonicParsing="false" onAction="#signup2" text="Sign Up" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Label layoutX="196.0" layoutY="351.0" text="Sudah punya akun?" />
-      <Button fx:id="btnLogin2" layoutX="313.0" layoutY="346.0" mnemonicParsing="false" onAction="#login2" prefHeight="17.0" prefWidth="68.0" text="Log In" textAlignment="CENTER">
+      <Label layoutX="414.0" layoutY="364.0" text="Sudah punya akun?" />
+      <Button fx:id="btnLogin2" layoutX="518.0" layoutY="359.0" mnemonicParsing="false" onAction="#login2" prefHeight="17.0" prefWidth="68.0" text="Log In" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

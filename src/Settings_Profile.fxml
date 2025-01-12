@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settingProfileController">
    <children>
       <ImageView fitHeight="430.0" fitWidth="600.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -37,7 +37,7 @@
                            <effect>
                               <ImageInput>
                                  <source>
-                                    <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/beranda.png" />
+                                    <Image url="@IMAGE/beranda.png" />
                                  </source>
                               </ImageInput>
                            </effect>
@@ -56,7 +56,7 @@
                      <effect>
                         <ImageInput x="0.5" y="0.5">
                            <source>
-                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/setting.png" />
+                              <Image url="@IMAGE/setting.png" />
                            </source>
                         </ImageInput>
                      </effect>
@@ -65,7 +65,7 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <VBox layoutX="194.0" layoutY="171.0" prefHeight="200.0" prefWidth="134.0" spacing="5.0">
+      <VBox layoutX="135.0" layoutY="169.0" prefHeight="200.0" prefWidth="134.0" spacing="5.0">
          <children>
             <Label text=" ID Pasien">
                <font>
@@ -99,49 +99,45 @@
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="337.0" layoutY="169.0" prefHeight="171.0" prefWidth="189.0" spacing="5.0">
+      <VBox layoutX="290.0" layoutY="169.0" prefHeight="171.0" prefWidth="189.0" spacing="5.0">
          <children>
-            <Label text=": P0045">
+            <Label fx:id="lblId">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text=": Maya Sari Pratama">
+            <Label fx:id="lblNama">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text=": Perempuan">
+            <Label fx:id="lblKelamin">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text=": 13 Oktober 1991">
+            <Label fx:id="lblLahir">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text=": 087823875149">
+            <Label fx:id="lblTelp">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text=": maya.sari@gmail.com">
+            <Label fx:id="lblEmail">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <ImageView fitHeight="171.0" fitWidth="148.0" layoutX="33.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@IMAGE/menu%20-%20pengaturan%203.png" />
-         </image>
-      </ImageView>
       <Label layoutX="169.0" layoutY="90.0" prefHeight="69.0" prefWidth="216.0" text="Data Diri Pasien">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
+      <Button fx:id="btnEdit" layoutX="466.0" layoutY="343.0" mnemonicParsing="false" onAction="#editProfile" prefHeight="25.0" prefWidth="70.0" text="Edit" />
    </children>
 </AnchorPane>

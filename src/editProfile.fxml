@@ -5,8 +5,7 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ImageInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AntrianController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editProfileController">
    <children>
-      <ImageView fitHeight="474.0" fitWidth="600.0" layoutX="1.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="430.0" fitWidth="600.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@IMAGE/background.png" />
          </image>
@@ -30,9 +29,9 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <VBox alignment="CENTER" layoutX="12.0" layoutY="-24.0" prefHeight="76.0" prefWidth="57.0" spacing="5.0">
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="-14.0" prefHeight="76.0" prefWidth="57.0" spacing="5.0">
                      <children>
-                        <Button fx:id="btnBeranda" mnemonicParsing="false" onAction="#beranda" text="Beranda">
+                        <Button fx:id="btnBeranda" mnemonicParsing="false" onAction="#beranda" prefHeight="36.0" prefWidth="42.0" text="Beranda">
                            <font>
                               <Font name="System Bold" size="8.0" />
                            </font>
@@ -67,21 +66,55 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="222.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@IMAGE/listantrean2.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="282.0" layoutY="110.0" text="List Antrean">
+      <VBox layoutX="135.0" layoutY="169.0" prefHeight="200.0" prefWidth="134.0" spacing="8.0">
+         <children>
+            <Label text=" ID Pasien">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Nama Lengkap ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Jenis Kelamin ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Tgl. Lahir ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Nomor Telepon ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Email ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="290.0" layoutY="169.0" prefHeight="171.0" prefWidth="189.0" spacing="5.0">
+         <children>
+            <Label fx:id="lblId" />
+            <TextField fx:id="tfNama" />
+            <TextField fx:id="tfJenis" />
+            <TextField fx:id="tfLahir" />
+            <TextField fx:id="tfTelp" />
+            <TextField fx:id="tfEmail" />
+         </children>
+      </VBox>
+      <Label layoutX="169.0" layoutY="90.0" prefHeight="69.0" prefWidth="216.0" text="Data Diri Pasien">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <TableView fx:id="tvListAntrian" layoutX="149.0" layoutY="159.0" prefHeight="200.0" prefWidth="303.0">
-        <columns>
-          <TableColumn fx:id="colNomor" prefWidth="153.0" text="Nomor Antrean" />
-          <TableColumn fx:id="colId" prefWidth="149.0" text="ID Pasien" />
-        </columns>
-      </TableView>
+      <Button fx:id="btnSave" layoutX="480.0" layoutY="357.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="74.0" text="Save" />
    </children>
 </AnchorPane>

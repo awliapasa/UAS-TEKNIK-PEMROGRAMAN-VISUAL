@@ -11,10 +11,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="riwayatKunjunganController">
    <children>
       <ImageView fitHeight="406.0" fitWidth="612.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -39,7 +40,7 @@
                            <effect>
                               <ImageInput>
                                  <source>
-                                    <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/beranda.png" />
+                                    <Image url="@IMAGE/beranda.png" />
                                  </source>
                               </ImageInput>
                            </effect>
@@ -58,7 +59,7 @@
                      <effect>
                         <ImageInput x="0.5" y="0.5">
                            <source>
-                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/setting.png" />
+                              <Image url="@IMAGE/setting.png" />
                            </source>
                         </ImageInput>
                      </effect>
@@ -77,13 +78,13 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <TableView layoutX="62.0" layoutY="159.0" prefHeight="200.0" prefWidth="491.0">
+      <TableView fx:id="tvKunjungan" layoutX="62.0" layoutY="159.0" prefHeight="200.0" prefWidth="491.0">
         <columns>
-          <TableColumn prefWidth="81.0" text="Tanggal" />
-          <TableColumn prefWidth="170.0" text="Tindakan" />
-            <TableColumn prefWidth="120.0" text="Diagnosis" />
-            <TableColumn prefWidth="119.0" text="Resep Obat" />
+          <TableColumn fx:id="colDate" prefWidth="81.0" text="Tanggal" />
+          <TableColumn fx:id="colTindakan" prefWidth="170.0" text="Tindakan" />
+            <TableColumn fx:id="colDiagnosa" prefWidth="238.6666768391927" text="Diagnosa" />
         </columns>
       </TableView>
+      <FlowPane prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

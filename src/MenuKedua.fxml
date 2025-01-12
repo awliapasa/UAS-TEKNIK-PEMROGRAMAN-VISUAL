@@ -49,7 +49,7 @@
                      <effect>
                         <ImageInput x="0.5" y="0.5">
                            <source>
-                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/IMAGE/IMAGE/setting.png" />
+                              <Image url="@IMAGE/IMAGE/setting.png" />
                            </source>
                         </ImageInput>
                      </effect>

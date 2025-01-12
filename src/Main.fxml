@@ -24,8 +24,8 @@
       </ImageView>
       <VBox layoutX="189.0" layoutY="124.0" prefHeight="63.0" prefWidth="222.0" spacing="10.0">
          <children>
-            <TextField promptText="Masukkan username (id) atau email" />
-            <PasswordField />
+            <TextField fx:id="tfEmail" promptText="Masukkan email" />
+            <PasswordField fx:id="tfPass" promptText="Masukkan password" />
          </children>
       </VBox>
       <Button fx:id="btnLogin" layoutX="272.0" layoutY="222.0" mnemonicParsing="false" onAction="#login" text="Log In" textAlignment="CENTER">

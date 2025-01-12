@@ -33,7 +33,7 @@
                <effect>
                   <ImageInput x="0.5" y="0.5">
                      <source>
-                        <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/List%20Antrian.png" />
+                        <Image url="@IMAGE/List%20Antrian.png" />
                      </source>
                   </ImageInput>
                </effect>
@@ -54,7 +54,7 @@
                <effect>
                   <ImageInput x="0.5" y="0.5">
                      <source>
-                        <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/Riwayat%20Kunjungan.png" />
+                        <Image url="@IMAGE/Riwayat%20Kunjungan.png" />
                      </source>
                   </ImageInput>
                </effect>
@@ -75,7 +75,7 @@
                <effect>
                   <ImageInput x="0.5" y="0.5">
                      <source>
-                        <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/daftar_antrian.png" />
+                        <Image url="@IMAGE/daftar_antrian.png" />
                      </source>
                   </ImageInput>
                </effect>
@@ -100,7 +100,7 @@
                            <effect>
                               <ImageInput>
                                  <source>
-                                    <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/beranda.png" />
+                                    <Image url="@IMAGE/beranda.png" />
                                  </source>
                               </ImageInput>
                            </effect>
@@ -119,7 +119,7 @@
                      <effect>
                         <ImageInput x="0.5" y="0.5">
                            <source>
-                              <Image url="file:/C:/SEMESTER%203/Pemrograman%20Visual/Project%20UAS/Aplikasi_UAS%20(2)/Aplikasi_UAS/src/IMAGE/setting.png" />
+                              <Image url="@IMAGE/setting.png" />
                            </source>
                         </ImageInput>
                      </effect>
